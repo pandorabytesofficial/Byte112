@@ -1,0 +1,616 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+/* Container for content centering */
+.container {
+    max-width: 1140px; /* Similar width to Kaggle */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Padding to prevent content from touching the edges */
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar-signup {
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+/* Button Styles */
+.hero-btn, .navbar-signin {
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 50px; /* Rounded edges */
+    font-size: 1em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+/* Hero Section Register Buttons */
+.register-btn {
+    background-color: rgba(255, 255, 255, 0.2); /* Translucent white */
+    color: #00aaff; /* Blue text */
+    border: 2px solid #00aaff; /* Blue border */
+    margin-right: 1em;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for hero section buttons */
+.register-btn:hover {
+    transform: translateY(-5px); /* Move up slightly */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Slight shadow on hover */
+}
+
+/* Sign In Button Styles */
+.navbar-signin {
+    background-color: black;
+    color: white;
+    border-radius: 50px; /* Rounded edges */
+    border: 2px solid black;
+    padding: 0.8em 1.5em;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-left: auto; /* Push it to the far right */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Hover effect for Sign In button */
+.navbar-signin:hover {
+    transform: translateY(-5px); /* Move up slightly */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+/* Shake effect on hover */
+.hero-btn:hover, .navbar-signin:hover {
+    animation: shake 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Ensure buttons do not collide in the navigation bar */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-signin {
+    margin-left: 20px; /* Spacing between Sign In button and navbar links */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5em 0;
+    background-color: white;
+    margin-top: 60px;
+}
+
+.hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.hero-btn {
+    background-color: #00aaff;
+    color: white;
+    padding: 0.8em 1.5em;
+    border: none;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto; /* Maintains the aspect ratio of the image */
+    display: block;
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+/* Kaggle Section */
+.kaggle-section {
+    padding: 3em 0;
+    text-align: center;
+    background-color: white;
+}
+
+.kaggle-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+}
+
+.kaggle-card {
+    max-width: 180px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kaggle-card img {
+    width: 100px; /* Adjust icon size to be smaller and more centered */
+    margin-bottom: 1em;
+}
+
+.kaggle-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    font-family: 'Arial', sans-serif;
+}
+
+.kaggle-card p {
+    font-size: 0.85em;
+    color: #666;
+    line-height: 1.4;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Adjust the overall section padding and font */
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    font-family: 'Arial', sans-serif;
+}
+
+/* General Section Spacing */
+section {
+    margin-bottom: 0.5em; /* Reduced gap between sections */
+}
+
+
+
+
+
+/* Datasets Section */
+.datasets-section {
+    padding: 3em 0;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.info-section {
+    flex: 1;
+    padding: 2em;
+    max-width: 400px;
+}
+
+.info-section h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.info-section p {
+    font-size: 1.1em;
+    margin-bottom: 2em;
+}
+
+.stats {
+    display: flex;
+    gap: 2em;
+}
+
+.stat-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+}
+
+.stat-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+.dataset-display {
+    flex: 2;
+    padding: 2em;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.dataset-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+.new-dataset-btn {
+    padding: 0.5em 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.new-dataset-btn:hover {
+    background-color: #45a049;
+}
+
+.search-bar {
+    margin-bottom: 1.5em;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0.7em;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.dataset-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.dataset-item {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dataset-item:hover {
+    background-color: #f0f0f0;
+}
+
+.dataset-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 1.2em;
+}
+
+.dataset-info h3 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.dataset-info p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+/* Main Skills Section */
+.skills-section {
+    padding: 3em 0;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    gap: 5em; /* Increased gap to add space between text and image */
+}
+
+/* Left Text Section */
+.skills-text {
+    flex: 1;
+    text-align: left;
+    padding: 1em;
+    max-width: 400px;
+}
+
+.skills-text h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.skills-text p {
+    font-size: 1.1em;
+    margin-bottom: 1.5em;
+}
+
+.skills-stats {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.skills-stats p {
+    margin: 0.5em 0;
+}
+
+/* Right Side: Clickable Image with Web Window Effect */
+.skills-display {
+    flex: 1.5;
+    padding: 1.5em;
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+}
+
+.image-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 100%; 
+    height: 450px; /* Added height for aspect ratio control */
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover {
+    transform: scale(1.02); /* Slight zoom on hover for interactivity */
+}
+
+/* Browser Window Effect */
+.browser-window {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.browser-header {
+    display: flex;
+    padding: 0.5em;
+    background-color: #e0e0e0;
+    border-bottom: 1px solid #ccc;
+    justify-content: flex-start;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.red {
+    background-color: #ff5f56;
+}
+
+.yellow {
+    background-color: #ffbd2e;
+}
+
+.green {
+    background-color: #27c93f;
+}
+
+.web-window-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image fits well without stretching */
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+/* Kagglers Section */
+.kagglers-section {
+    padding: 3em 0;
+    text-align: center;
+}
+
+.kagglers-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kagglers-section h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.kagglers-section p {
+    font-size: 1.1em;
+    margin-bottom: 2em;
+}
+
+/* Avatars */
+.kagglers-avatars {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+.kagglers-avatars img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+/* Information Boxes */
+.kagglers-info-container {
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+}
+
+.kagglers-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-box {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 1.5em;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.info-box h3 {
+    font-size: 1.4em;
+    margin-bottom: 0.5em;
+}
+
+.info-box p {
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    background-color: #e0e0e0;
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #f0f0f0;
+    padding: 3em 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-links {
+    display: flex;
+    gap: 3em;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+.footer-column h4 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #666;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #333;
+}
+
+/* Footer Social Links */
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: flex-start;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: #666;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #333;
+}

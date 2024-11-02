@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaggle Inspired Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-brand">MyWebsite</div>
+        <ul class="navbar-links">
+            <li><a href="#">Competitions</a></li>
+            <li><a href="#">Datasets</a></li>
+            <li><a href="#">Models</a></li>
+            <li><a href="#">Courses</a></li>
+        </ul>
+        <button class="navbar-signin">Sign In</button>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Level up with the largest AI & ML community</h1>
+            <p>Join over 20M+ machine learners to share, stress test, and stay up-to-date on the latest ML techniques and technologies.</p>
+            <button class="hero-btn register-btn">Register with Google</button>
+            <button class="hero-btn register-btn">Register with Email</button>
+        </div>
+        <div class="hero-image">
+            <img src="hero-illo.png" alt="AI Community Image">
+        </div>
+    </div>
+</section>
+
+   <!-- Who's on Kaggle Section -->
+<section class="kaggle-section">
+    <div class="container">
+        <h2>Who’s on Kaggle?</h2>
+        <div class="kaggle-cards">
+            <div class="kaggle-card">
+                <img src="learner.png" alt="Learners">
+                <div class="card-content">
+                    <h3>Learners</h3>
+                    <p>Dive into Kaggle courses, competitions & forums.</p>
+                </div>
+            </div>
+            <div class="kaggle-card">
+                <img src="developer.png" alt="Developers">
+                <div class="card-content">
+                    <h3>Developers</h3>
+                    <p>Leverage Kaggle's models, notebooks & datasets.</p>
+                </div>
+            </div>
+            <div class="kaggle-card">
+                <img src="researcher.png" alt="Researchers">
+                <div class="card-content">
+                    <h3>Researchers</h3>
+                    <p>Advance ML with our pre-trained model hub & competitions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Datasets Section -->
+<section class="datasets-section">
+    <div class="container">
+        <!-- Info Section -->
+        <div class="info-section">
+            <h2>Tackle your next project with Kaggle</h2>
+            <p>On Kaggle you'll find all the resources and knowledge needed for your next real-world ML project.</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>380K</h3>
+                    <p>Datasets</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1.2M</h3>
+                    <p>Notebooks</p>
+                </div>
+                <div class="stat-item">
+                    <h3>8,100</h3>
+                    <p>Models</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dataset Display Section -->
+        <div class="dataset-display">
+            <div class="dataset-header">
+                <h2>Datasets</h2>
+                <button class="new-dataset-btn">+ New Dataset</button>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search datasets" id="search-input">
+            </div>
+            <div class="dataset-list">
+                <div class="dataset-item" onclick="showDatasetDetails('dataset1')">
+                    <img src="d1.png" alt="Dataset 1">
+                    <div class="dataset-info">
+                        <h3>Bitcoin Historical Data</h3>
+                        <p>Usability 8.4 | 1 File (CSV) | 2 KB</p>
+                    </div>
+                </div>
+                <div class="dataset-item" onclick="showDatasetDetails('dataset2')">
+                    <img src="d1.png" alt="Dataset 2">
+                    <div class="dataset-info">
+                        <h3>Fruits 360 Dataset</h3>
+                        <p>Usability 10.0 | 1 File (CSV) | 7 KB</p>
+                    </div>
+                </div>
+                <div class="dataset-item" onclick="showDatasetDetails('dataset3')">
+                    <img src="d1.png" alt="Dataset 3">
+                    <div class="dataset-info">
+                        <h3>International Football Results</h3>
+                        <p>Usability 10.0 | 1 File (CSV) | 5 MB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- ML Skills Section with Clickable Web Window -->
+<section class="skills-section">
+    <div class="container">
+        <!-- Left Text Section -->
+        <div class="skills-text">
+            <h2>Build your ML skills in a supportive and helpful community</h2>
+            <p>Kaggle's community is a diverse group of 20 million data scientists, ML engineers & enthusiasts from around the world.</p>
+            <div class="skills-stats">
+                <p><strong>380K</strong> Datasets</p>
+                <p><strong>1.2M</strong> Notebooks</p>
+                <p><strong>8,100</strong> Models</p>
+            </div>
+        </div>
+
+        <!-- Right Section with Clickable Image -->
+        <div class="skills-display">
+            <a href="your-target-link.html" class="image-wrapper" target="_blank">
+                <div class="browser-window">
+                    <div class="browser-header">
+                        <div class="circle red"></div>
+                        <div class="circle yellow"></div>
+                        <div class="circle green"></div>
+                    </div>
+                    <img src="topic-detail@1.png" alt="JAX/FLAX Getting Started" class="web-window-img">
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Who are Kagglers Section -->
+<section class="kagglers-section">
+    <div class="container">
+        <h2>Who are Kagglers?</h2>
+        <p>Kagglers come from all walks of life: students, professionals, and researchers. They use Kaggle to learn data science & ML, stay up-to-date on the latest techniques, and collaborate.</p>
+
+        <!-- Avatars Section -->
+        <div class="kagglers-avatars">
+            <img src="icon.png" alt="Kaggler 1">
+            <img src="icon.png" alt="Kaggler 2">
+            <img src="icon.png" alt="Kaggler 3">
+            <!-- Add more avatar images as needed -->
+        </div>
+    </div>
+
+    <!-- Information Boxes -->
+    <div class="kagglers-info-container">
+        <div class="kagglers-info">
+            <a href="global-community.html" class="info-box">
+                <h3>A global community</h3>
+                <p>Over 20 million users from over 190 countries are here.</p>
+            </a>
+
+            <a href="kagglex.html" class="info-box">
+                <h3>A home for everyone</h3>
+                <p>The KaggleX Mentorship Program is committed to creating a more inclusive data science community.</p>
+            </a>
+
+            <a href="ml-discussions.html" class="info-box">
+                <h3>A place to discuss ML</h3>
+                <p>Find answers to your ML questions and connect with enthusiasts on Kaggle's forums.</p>
+                <div class="tags">
+                    <span>Data Visualization</span>
+                    <span>Neural Networks</span>
+                    <span>Computer Vision</span>
+                    <span>NLP</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Product</h4>
+                <a href="#">Competitions</a>
+                <a href="#">Datasets</a>
+                <a href="#">Models</a>
+                <a href="#">Notebooks</a>
+            </div>
+            <div class="footer-column">
+                <h4>Documentation</h4>
+                <a href="#">Competitions</a>
+                <a href="#">Datasets</a>
+                <a href="#">Models</a>
+                <a href="#">Notebooks</a>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <a href="#">Our Team</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Host a Competition</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Facebook</a>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
